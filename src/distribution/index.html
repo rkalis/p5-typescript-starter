@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="features.js"></script>
+    <script>
+      let genTokenData = (projectNum) => {
+        let hash = "0x";
+        for (var i = 0; i < 64; i++) {
+          hash += Math.floor(Math.random() * 16).toString(16);
+        }
+
+        const tokenId = (projectNum * 1000000 + Math.floor(Math.random() * 1000)).toString();
+
+        return { hash, tokenId };
+      }
+      let tokenData = genTokenData(176);
+      console.log(tokenData)
+      console.log(calculateFeatures(tokenData))
+    </script>
+    <script src="dist.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
