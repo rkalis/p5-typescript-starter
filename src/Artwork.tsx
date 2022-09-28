@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import Sketch from 'react-p5';
 import { draw as drawInternal } from './common/artwork';
 import { Random } from './common/random-generator';
-import { generateAttributes, displayAttributes } from './common/attributes';
+import { generateAttributes } from './common/attributes';
+import { displayAttributes } from './common/utils';
 type P5 = import('p5');
 
 interface Props {
